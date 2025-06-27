@@ -20,3 +20,16 @@ variable "public_subnets" {
   description = "List of public subnets cidr"
   default     = []
 }
+
+variable "private_subnets" {
+  type        = list(string)
+  description = "List of private subnets cidr"
+  default     = []
+}
+
+variable "create_nat_gateway" {
+  type        = bool
+  description = "specify whether to create a nat gateway for the private subnets"
+  default     = false
+}
+
